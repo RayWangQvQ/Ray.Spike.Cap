@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetCore.CAP" Version="6.2.1" />
-    <PackageReference Include="DotNetCore.CAP.Dashboard" Version="6.2.1" />
-    <PackageReference Include="DotNetCore.CAP.InMemoryStorage" Version="6.2.1" />
-    <PackageReference Include="DotNetCore.CAP.Sqlite" Version="6.2.1" />
-    <PackageReference Include="Savorboard.CAP.InMemoryMessageQueue" Version="6.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ray.Spike.Cap.Common\Ray.Spike.Cap.Common.csproj" />
   </ItemGroup>
 
 </Project>

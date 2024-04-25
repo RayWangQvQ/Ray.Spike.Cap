@@ -1,6 +1,7 @@
 ﻿using DotNetCore.CAP.Filter;
+using Microsoft.Extensions.Logging;
 
-namespace Ray.Spike.Cap
+namespace Ray.Spike.Cap.Common
 {
     public class MyCapFilter : SubscribeFilter
     {
@@ -11,19 +12,22 @@ namespace Ray.Spike.Cap
             _logger = logger;
         }
 
-        public override void OnSubscribeExecuting(ExecutingContext context)
+        public override Task OnSubscribeExecutingAsync(ExecutingContext context)
         {
             _logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行前");
+            return Task.CompletedTask;
         }
 
-        public override void OnSubscribeExecuted(ExecutedContext context)
+        public override Task OnSubscribeExecutedAsync(ExecutedContext context)
         {
             _logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行后");
+            return Task.CompletedTask;
         }
 
-        public override void OnSubscribeException(ExceptionContext context)
+        public override Task OnSubscribeExceptionAsync(ExceptionContext context)
         {
             _logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行异常");
+            return Task.CompletedTask;
         }
     }
 }

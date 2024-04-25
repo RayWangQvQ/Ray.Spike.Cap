@@ -18,8 +18,14 @@ namespace Ray.Spike.Cap.Controllers
         [HttpGet]
         public IActionResult SendMessage([FromServices] ICapPublisher capBus)
         {
-            capBus.Publish("test.show.time", DateTime.Now);
+            _logger.LogDebug("1");
+            _logger.LogDebug("2");
+            _logger.LogDebug("3");
+            capBus.PublishDelay(TimeSpan.FromSeconds(5), "test.show.time", DateTime.Now);
             _logger.LogInformation("Already send.");
+            _logger.LogDebug("4");
+            _logger.LogDebug("5");
+            _logger.LogDebug("6");
             return Ok();
         }
     }

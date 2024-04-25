@@ -1,4 +1,5 @@
 using DotNetCore.CAP.Serialization;
+using Ray.Spike.Cap.Common;
 using Savorboard.CAP.InMemoryMessageQueue;
 
 namespace Ray.Spike.Cap
@@ -25,6 +26,10 @@ namespace Ray.Spike.Cap
                 {
                     cfg.ConnectionString = "Data Source=./cap-event.db";
                 });
+
+                //x.UseSqlServer(opt => {
+                //    //SqlServerOptions
+                //});
 
                 x.UseInMemoryMessageQueue();
 

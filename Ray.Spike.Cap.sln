@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ray.Spike.Cap", "Ray.Spike.Cap\Ray.Spike.Cap.csproj", "{F8029F45-DA1F-43B0-A6F9-3E7ED38D5BAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ray.Spike.Cap", "Ray.Spike.Cap\Ray.Spike.Cap.csproj", "{F8029F45-DA1F-43B0-A6F9-3E7ED38D5BAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ray.Spike.Cap.Common", "Ray.Spike.Cap.Common\Ray.Spike.Cap.Common.csproj", "{1152FEDB-17DB-48E9-AFFF-543DA66ED014}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F8029F45-DA1F-43B0-A6F9-3E7ED38D5BAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8029F45-DA1F-43B0-A6F9-3E7ED38D5BAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8029F45-DA1F-43B0-A6F9-3E7ED38D5BAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1152FEDB-17DB-48E9-AFFF-543DA66ED014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1152FEDB-17DB-48E9-AFFF-543DA66ED014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1152FEDB-17DB-48E9-AFFF-543DA66ED014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1152FEDB-17DB-48E9-AFFF-543DA66ED014}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
