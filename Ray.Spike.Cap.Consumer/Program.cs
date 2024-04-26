@@ -27,8 +27,8 @@ namespace Ray.Spike.Cap.Consumer
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddSingleton<ISerializer, EncryptSerializer>();
-            //builder.Services.AddSingleton<ISerializer, BodyEncryptSerializer>();
+            //builder.Services.AddSingleton<ISerializer, EncryptSerializer>();
+            builder.Services.AddSingleton<ISerializer, BodyEncryptSerializer>();
             builder.Services.AddCap(x =>
             {
                 //x.UseInMemoryStorage();
