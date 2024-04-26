@@ -1,5 +1,6 @@
 using DotNetCore.CAP;
 using Microsoft.AspNetCore.Mvc;
+using Ray.Spike.Cap.Common;
 
 namespace Ray.Spike.Cap.Controllers
 {
@@ -18,9 +19,19 @@ namespace Ray.Spike.Cap.Controllers
         [HttpGet]
         public IActionResult SendMessage([FromServices] ICapPublisher capBus)
         {
-            _logger.LogDebug("开始发送");
+            _logger.LogDebug("-------开始发送-------");
             capBus.PublishDelay(TimeSpan.FromSeconds(5), "test.show.time", DateTime.Now);
-            _logger.LogDebug("发送结束");
+            _logger.LogDebug("-------发送结束-------");
+            return Ok();
+        }
+
+        [Route("~/sendobj")]
+        [HttpGet]
+        public IActionResult SendObjMessage([FromServices] ICapPublisher capBus)
+        {
+            _logger.LogDebug("-------开始发送-------");
+            capBus.PublishDelay(TimeSpan.FromSeconds(5), "test.show.obj", MyEvt.Create());
+            _logger.LogDebug("-------发送结束-------");
             return Ok();
         }
     }
