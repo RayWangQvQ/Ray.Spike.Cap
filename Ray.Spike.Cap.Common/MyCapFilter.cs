@@ -14,19 +14,19 @@ namespace Ray.Spike.Cap.Common
 
         public override Task OnSubscribeExecutingAsync(ExecutingContext context)
         {
-            _logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行前");
+            //_logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行前");
             return Task.CompletedTask;
         }
 
         public override Task OnSubscribeExecutedAsync(ExecutedContext context)
         {
-            _logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行后");
+            //_logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行后");
             return Task.CompletedTask;
         }
 
         public override Task OnSubscribeExceptionAsync(ExceptionContext context)
         {
-            _logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行异常");
+            //_logger.LogInformation("SubscribeFilter: {0}", "订阅方法执行异常");
             return Task.CompletedTask;
         }
     }

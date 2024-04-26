@@ -18,14 +18,9 @@ namespace Ray.Spike.Cap.Controllers
         [HttpGet]
         public IActionResult SendMessage([FromServices] ICapPublisher capBus)
         {
-            _logger.LogDebug("1");
-            _logger.LogDebug("2");
-            _logger.LogDebug("3");
+            _logger.LogDebug("开始发送");
             capBus.PublishDelay(TimeSpan.FromSeconds(5), "test.show.time", DateTime.Now);
-            _logger.LogInformation("Already send.");
-            _logger.LogDebug("4");
-            _logger.LogDebug("5");
-            _logger.LogDebug("6");
+            _logger.LogDebug("发送结束");
             return Ok();
         }
     }

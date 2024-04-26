@@ -17,7 +17,9 @@ namespace Ray.Spike.Cap.Controllers
         [HttpGet]
         public void ReceiveMessage(DateTime time)
         {
+            _logger.LogInformation("开始接收");
             _logger.LogInformation("message time is:{time}", time);
+            _logger.LogInformation("接收结束");
         }
     }
 }
